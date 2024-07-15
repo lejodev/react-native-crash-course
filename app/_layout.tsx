@@ -18,7 +18,6 @@ const RootLAyout = () => {
 
   SplashScreen.preventAutoHideAsync(); // Prevents the splash screen from hiding once JS is loaded. Instead, it will be programmatically hidden.
 
-
   useEffect(() => {
     if (error) throw error;
     if (fontsLoaded) SplashScreen.hideAsync();
@@ -29,6 +28,9 @@ const RootLAyout = () => {
   return (
     <Stack>
       <Stack.Screen name="index" options={{ headerShown: false }} />
+      <Stack.Screen name="(auth)" options={{ headerShown: false }} />
+      <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
+      {/* <Stack.Screen name="/search/[query]" options={{ headerShown: false }} /> */}
     </Stack>
   );
 };
